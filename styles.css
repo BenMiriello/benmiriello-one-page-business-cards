@@ -24,7 +24,7 @@ body {
     width: 500px;
     height: 286px;
     padding: 10px 15px 15px 10px;
-    margin-top: 50px;
+    margin-top: 75px;
     border-radius: 2px;
     background: url("business-card-front.jpg");
     background-size: cover;
@@ -45,16 +45,62 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-.front {
+
+.card.front {
+    right: 50px;
     background: url("business-card-front.jpg");
     background-size: cover;
 }
 
-.back {
-    /* position: absolute; */
-    /* left: 30px;
-    top: 25px;
-    color: transparent; */
+.card.back {
+    left: 50px;
     background: url("business-card-back.jpg");
     background-size: cover;
 }
+
+/* ANIMATIONS */
+
+.card.front {
+    transform: rotateZ(-5deg);
+    left: -15%;
+}
+.card.back {
+    transform: rotateZ(2deg);
+    left: 5%;
+    top: -2%;
+}
+.card:hover {
+    transform: scale(1.07);
+}
+
+.card {
+    /* cursor:pointer; */
+    transition: 0.5s;
+}
+
+.shadow-transition {
+    position: relative; /* For positioning the pseudo-element */
+}
+  
+.shadow-transition::before {
+    /* Position the pseudo-element. */
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  
+    /* Create the box shadow at expanded size. */
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+  
+    /* Hidden by default. */
+    opacity: 0;
+    transition: opacity 500ms;
+}
+  
+.shadow-transition:hover::before {
+    /* Show the pseudo-element on hover. */
+    opacity: 1;
+}
+
