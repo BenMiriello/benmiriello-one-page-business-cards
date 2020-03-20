@@ -45,3 +45,8 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+.front {
+    background: url("business-card-front.jpg");
+    background-size: cover;
+}
+
