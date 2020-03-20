@@ -26,7 +26,7 @@ body {
     padding: 10px 15px 15px 10px;
     margin-top: 50px;
     border-radius: 2px;
-    background: url("card-background.jpg");
+    background: url("business-card-front.jpg");
     background-size: cover;
     box-shadow:
     /* top shadow */
@@ -50,3 +50,11 @@ body {
     background-size: cover;
 }
 
+.back {
+    /* position: absolute; */
+    /* left: 30px;
+    top: 25px;
+    color: transparent; */
+    background: url("business-card-back.jpg");
+    background-size: cover;
+}
