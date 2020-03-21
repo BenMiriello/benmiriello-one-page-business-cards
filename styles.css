@@ -47,6 +47,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transform: translateY(500px)
 }
 
 .card.front {
@@ -54,14 +55,16 @@ body {
     background-size: cover;
     transform: rotateZ(-5deg);
     left: -15%;
-    bottom: 300px;
+    top: 0px;
+    /* bottom: 300px; */
 }
 
 .card.back {
     background: url("card-back.jpg");
     background-size: cover;
     left: 5%;
-    bottom: 225px;
+    /* bottom: 225px; */
+    top: 50px;
     /* transform: translateY(-225px);
     -webkit-transform: translateY(-225px); */
     transform: rotateZ(2deg);
@@ -73,10 +76,11 @@ body {
     height: 540px;
     background: url("keyboard.png");
     background-size: cover;
-    position: relative;
-    left: 650px;
-    bottom: 400px;
-    display: flex;
+    /* position: relative; */
+    left: 25%;
+    /* bottom: 400px; */
+    top: 0;
+    position: absolute;
     align-items: center;
     flex-direction: column;
 
@@ -94,7 +98,7 @@ body {
         inset 1px 1px 12px rgba(0,0,0,0.3)
     ;
 
-    transform: rotateZ(4deg);
+    transform: translateY(-350px) rotateZ(4deg);
     overflow: hidden;
 }
 
