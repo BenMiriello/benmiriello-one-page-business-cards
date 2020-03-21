@@ -16,7 +16,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: url("white-and-grey-surface.jpg");
+    /* background: url("white-and-grey-surface.jpg"); */
+    background: white;
     background-size: 2000px;
 }
 .card {
@@ -24,10 +25,11 @@ body {
     width: 500px;
     height: 286px;
     padding: 10px 15px 15px 10px;
-    margin-top: 75px;
+    bottom:75px;
+    margin-top: 25px;
     border-radius: 2px;
-    background: url("business-card-front.jpg");
-    background-size: cover;
+    /* background: url("card-front.jpg"); */
+    /* background-size: cover; */
     box-shadow:
     /* top shadow */
     0px -10px 10px rgba(0,0,0,0.1),
@@ -48,13 +50,13 @@ body {
 
 .card.front {
     right: 50px;
-    background: url("business-card-front.jpg");
+    background: url("card-front.jpg");
     background-size: cover;
 }
 
 .card.back {
     left: 50px;
-    background: url("business-card-back.jpg");
+    background: url("card-back.jpg");
     background-size: cover;
 }
 
@@ -109,7 +111,7 @@ body {
     width: 110vw;
     height: 110vh;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.5) 20%, rgba(255,255,255,0) 60%);
+    background: radial-gradient(circle, rgba(255,255,255,0.41) 20%, rgba(255,255,255,0) 60%);
     opacity: 0.4;
     z-index: 9;
     pointer-events: none;
