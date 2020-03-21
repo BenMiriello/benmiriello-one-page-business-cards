@@ -1,2 +1,2 @@
-# benmiriello-one-page-business-cards
-Single landing page with two photorealistic personal business cards.
+# Ben Miriello Landing Page
+Static landing page with personal information shown on business cards.

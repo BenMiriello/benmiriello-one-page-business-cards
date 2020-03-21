@@ -18,7 +18,9 @@ body {
     justify-content: center;
     flex-direction: column;
     background: url("wood-table-light.jpg");
-    background-size: 2000px;
+    background-size: 1900px;
+    overflow: hidden;
+    /* background-repeat: repeat; */
 }
 
 .card {
@@ -66,22 +68,16 @@ body {
     -webkit-transform: rotateZ(2deg);
 }
 
-.key-container {
-    border-radius: 20px;
-    box-shadow: 10px rgba(0,0,0,0.5)
-}
-
 .keyboard {
+    width: 1978px;
+    height: 540px;
     background: url("keyboard.png");
     background-size: cover;
     position: relative;
-    left: 350px;
+    left: 650px;
     bottom: 400px;
-    width: 1978px;
-    height: 540px;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     flex-direction: column;
 
     border-radius: 23px;
@@ -99,6 +95,7 @@ body {
     ;
 
     transform: rotateZ(4deg);
+    overflow: hidden;
 }
 
 /* ANIMATIONS */
