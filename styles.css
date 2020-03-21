@@ -8,6 +8,7 @@ body {
     overflow: hidden;
     font-family: 'Fira Sans', sans-serif;
 }
+
 .wrapper {
     position: absolute;
     width: 110vw;
@@ -16,31 +17,29 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* background: url("white-and-grey-surface.jpg"); */
-    background: white;
+    background: url("wood-table-light.jpg");
     background-size: 2000px;
 }
+
 .card {
     position: relative;
     width: 500px;
     height: 286px;
-    padding: 10px 15px 15px 10px;
+    padding: 10px 10px 10px 10px;
     bottom:75px;
-    margin-top: 25px;
+    margin-top: 0px;
     border-radius: 2px;
-    /* background: url("card-front.jpg"); */
-    /* background-size: cover; */
     box-shadow:
-    /* top shadow */
-    0px -10px 10px rgba(0,0,0,0.1),
-    /* bottom shadow */
-    0px 10px 20px rgba(0,0,0,0.3),
-    /* left shadow */
-    -10px 0px 20px rgba(0,0,0,0.3),
-    /* right shadow */
-    10px 0px 20px rgba(0,0,0,0.3),
-    /* inner shadow */
-    inset 1px 1px 20px rgba(0,0,0,0.3)
+        /* top shadow */
+        0px -7px 7px rgba(0,0,0,0.1),
+        /* bottom shadow */
+        0px 7px 12px rgba(0,0,0,0.3),
+        /* left shadow */
+        -7px 0px 12px rgba(0,0,0,0.3),
+        /* right shadow */
+        7px 0px 12px rgba(0,0,0,0.3),
+        /* inner shadow */
+        inset 1px 1px 12px rgba(0,0,0,0.3)
     ;
     display: flex;
     align-items: center;
@@ -49,28 +48,61 @@ body {
 }
 
 .card.front {
-    right: 50px;
     background: url("card-front.jpg");
     background-size: cover;
+    transform: rotateZ(-5deg);
+    left: -15%;
+    bottom: 300px;
 }
 
 .card.back {
-    left: 50px;
     background: url("card-back.jpg");
     background-size: cover;
+    left: 5%;
+    bottom: 225px;
+    /* transform: translateY(-225px);
+    -webkit-transform: translateY(-225px); */
+    transform: rotateZ(2deg);
+    -webkit-transform: rotateZ(2deg);
+}
+
+.key-container {
+    border-radius: 20px;
+    box-shadow: 10px rgba(0,0,0,0.5)
+}
+
+.keyboard {
+    background: url("keyboard.png");
+    background-size: cover;
+    position: relative;
+    left: 350px;
+    bottom: 400px;
+    width: 1978px;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+
+    border-radius: 23px;
+    box-shadow:
+        /* top shadow */
+        0px -7px 7px rgba(0,0,0,0.1),
+        /* bottom shadow */
+        0px 7px 12px rgba(0,0,0,0.3),
+        /* left shadow */
+        -7px 0px 12px rgba(0,0,0,0.3),
+        /* right shadow */
+        7px 0px 12px rgba(0,0,0,0.3),
+        /* inner shadow */
+        inset 1px 1px 12px rgba(0,0,0,0.3)
+    ;
+
+    transform: rotateZ(4deg);
 }
 
 /* ANIMATIONS */
 
-.card.front {
-    transform: rotateZ(-5deg);
-    left: -15%;
-}
-.card.back {
-    transform: rotateZ(2deg);
-    left: 5%;
-    top: -2%;
-}
 .card:hover {
     transform: scale(1.07);
 }
@@ -111,8 +143,22 @@ body {
     width: 110vw;
     height: 110vh;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.41) 20%, rgba(255,255,255,0) 60%);
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 20%, rgba(255,255,255,0) 60%);
     opacity: 0.4;
     z-index: 9;
     pointer-events: none;
 }
+
+
+box-shadow:
+/* top shadow */
+0px -7px 7px rgba(0,0,0,0.1),
+/* bottom shadow */
+0px 7px 12px rgba(0,0,0,0.3),
+/* left shadow */
+-7px 0px 12px rgba(0,0,0,0.3),
+/* right shadow */
+7px 0px 12px rgba(0,0,0,0.3),
+/* inner shadow */
+inset 1px 1px 12px rgba(0,0,0,0.3)
+;
