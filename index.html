@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:light&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
@@ -12,13 +12,13 @@
             <div class="card front shadow-transition"></div>
             <div class="card back shadow-transition">
                 <div class="tooltip invisible-link">
-                    <a onclick="handleCopyClipboard(`(619)251-1666`)" onmouseout="handeOutCopyClipboard()">
+                    <a onclick="handleCopyClipboard(`(619)251-1666`)" onmouseout="handeOutCopyClipboard(`(619)251-1666`)">
                         <span class="tooltiptext" id="(619)251-1666">copy to clipboard</span>
                         (619)251-1666
                     </a>
                 </div>
                 <div class="tooltip invisible-link">
-                    <a onclick="handleCopyClipboard(`ben@miriello.com`)" onmouseout="handeOutCopyClipboard()">
+                    <a onclick="handleCopyClipboard(`ben@miriello.com`)" onmouseout="handeOutCopyClipboard(`ben@miriello.com`)">
                         <span class="tooltiptext" id="ben@miriello.com">copy to clipboard</span>
                         ben@miriello.com
                     </a>
@@ -56,14 +56,25 @@
 
             // COPY TO CLIPBOARD
             handleCopyClipboard = copyText => {
-                navigator.clipboard.writeText(copyText)
-
+                console.log(navigator)
+                console.log(navigator.clipboard)
+                console.log(copyText)
                 const tooltip = document.getElementById(copyText);
-                tooltip.innerHTML = "copied: " + copyText;
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(copyText)
+                        .then(() => {
+                            tooltip.innerHTML = "copied: " + copyText;
+                        })
+                        .catch(() => {
+                            tooltip.innerHTML = "permission not granted";
+                        })
+                } else {
+                    tooltip.innerHTML = "permission not granted";
+                }
             }
 
-            handeOutCopyClipboard = () => {
-                const tooltip = document.getElementById("myToolTip");
+            handeOutCopyClipboard = copyText => {
+                const tooltip = document.getElementById(copyText);
                 tooltip.innerHTML = "copy to clipboard";
             }
             

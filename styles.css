@@ -175,20 +175,20 @@ body {
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 220px;
-    background-color: #666;
+    width: 230px;
+    background-color: rgba(155,155,155,0.80);
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 150%;
-    left: 50%;
+    /* bottom: 150%; */
+    left: 265%;
     margin-left: -75px;
     opacity: 0;
     transition: opacity 0.3s;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .tooltip .tooltiptext::after {
