@@ -54,7 +54,7 @@ body {
     background: url("card-front-links.jpg");
     background-size: cover;
     transform: rotateZ(-5deg);
-    left: -15%;
+    left: -10%;
     top: 0px;
     /* bottom: 300px; */
 }
@@ -67,8 +67,9 @@ body {
     top: 50px;
     /* transform: translateY(-225px);
     -webkit-transform: translateY(-225px); */
-    transform: rotateZ(2deg);
-    -webkit-transform: rotateZ(2deg);
+
+    transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
 }
 
 .keyboard {
@@ -104,9 +105,9 @@ body {
 
 /* ANIMATIONS */
 
-.card:hover {
+/* .card:hover {
     transform: scale(1.07);
-}
+} */
 
 .card {
     /* cursor:pointer; */
@@ -127,7 +128,7 @@ body {
     left: 0;
   
     /* Create the box shadow at expanded size. */
-    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
   
     /* Hidden by default. */
     opacity: 0;
@@ -159,6 +160,50 @@ body {
     width: 100px;
     height: 48px;
     left: 69px;
-    top: 55px;
-    opacity: 0;
+    top: 8px;
+    white-space: nowrap;
+    color: rgba(255,255,255,0);
+    /* opacity: 0; */
 }
+
+/* COPY TO CLIPBOARD */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: #666;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 16px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    margin-right: 5px;
+    border-style: solid;
+    border-color: #666 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
