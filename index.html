@@ -46,39 +46,7 @@
                 </a>
             </div>
         </div>
-        <script>
-
-            // LIGHT ANIMATION
-            document.onmousemove = e => {
-                document.querySelector(".wrapper").style.transform = `translate(-${e.clientX * 0.01}px, -${e.clientY * 0.01}px)`
-                document.querySelector(".light").style.transform = `translate(-${e.clientX * 0.1}px, -${e.clientY * 0.1}px)`
-            }
-
-            // COPY TO CLIPBOARD
-            handleCopyClipboard = copyText => {
-                console.log(navigator)
-                console.log(navigator.clipboard)
-                console.log(copyText)
-                const tooltip = document.getElementById(copyText);
-                if (navigator.clipboard) {
-                    navigator.clipboard.writeText(copyText)
-                        .then(() => {
-                            tooltip.innerHTML = "copied: " + copyText;
-                        })
-                        .catch(() => {
-                            tooltip.innerHTML = "permission not granted";
-                        })
-                } else {
-                    tooltip.innerHTML = "permission not granted";
-                }
-            }
-
-            handeOutCopyClipboard = copyText => {
-                const tooltip = document.getElementById(copyText);
-                tooltip.innerHTML = "copy to clipboard";
-            }
-            
-        </script>
+        <script src="index.js"></script>
     </body>
 </html>
 

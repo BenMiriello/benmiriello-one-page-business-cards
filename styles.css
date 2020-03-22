@@ -17,9 +17,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* background: url("wood-table-light.jpg"); */
-    background: url("wood-table.jpg");
-    background-size: 2000px;
+    background: url("table.gif");
+    background-size: 1500px;
     overflow: hidden;
     /* background-repeat: repeat; */
 }
@@ -84,7 +83,7 @@ body {
     background: url("keyboard.png");
     background-size: cover;
     /* position: relative; */
-    left: 25%;
+    left: 20%;
     /* bottom: 400px; */
     top: 0;
     position: absolute;
@@ -105,7 +104,7 @@ body {
         inset 1px 1px 12px rgba(0,0,0,0.3)
     ;
 
-    transform: translateY(-300px) rotateZ(4deg);
+    transform: translateY(-320px) rotateZ(3deg);
     overflow: hidden;
 }
 
