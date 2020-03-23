@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.wrapper {
+    position: absolute;
+    width: 110vw;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url("../images/table.jpg");
+    background-size: 100%;
+    overflow: hidden;
+    /* background-repeat: repeat; */
+}
