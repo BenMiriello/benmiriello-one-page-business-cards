@@ -62,3 +62,9 @@
     /* opacity: 0; */
 }
 
+.mobile-card {
+    transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+    left: 0px;
+}
+

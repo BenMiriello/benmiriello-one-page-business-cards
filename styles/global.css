@@ -23,3 +23,17 @@ body {
     overflow: hidden;
     /* background-repeat: repeat; */
 }
+
+.mobile-wrapper {
+    position: absolute;
+    width: 110vw;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url("../images/blur-aurora.jpg");
+    background-size: 3000px;
+    overflow: hidden;
+}
+

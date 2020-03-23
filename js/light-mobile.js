@@ -1,3 +1,5 @@
+// ** Disabled due to 'deviceorientation' event permission being blocked on most mobile browsers **
+
 // MOBILE LIGHT ANIMATION (on device orientation)
 
 // const wrapper = document.querySelector(".wrapper")
